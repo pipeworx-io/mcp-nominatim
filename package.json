@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-nominatim",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Nominatim MCP — wraps OpenStreetMap Nominatim geocoding API (free, no auth)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-nominatim": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "nominatim"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-nominatim.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/nominatim",
   "pipeworx": {
-    "sourceHash": "v1-9421cce921dddf97218cc77ce95117ea524ba2edcf2bc638a0de51e824a2d55f",
-    "sourceCommit": "774de7f685a75e02d0b828d24a7b94794102152c"
+    "mode": "gateway",
+    "slug": "nominatim",
+    "gatewaySlug": "nominatim",
+    "sourceHash": "v1-3876eee8d418cbdee6631a53da123bc199d6e0b5a8c048d14d41dbf4353d055a",
+    "sourceCommit": "b2c4383545bb35171d0ada2beb1c9c7168ea175e"
   }
 }

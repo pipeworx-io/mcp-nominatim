@@ -1,0 +1,59 @@
+[
+  {
+    "name": "search_address",
+    "description": "Search for coordinates of an address or place name. Returns latitude, longitude, display name, and place type for matched locations.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Free-form address or place name to search for (e.g. \"Eiffel Tower, Paris\")."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum number of results to return. Defaults to 5, max 50."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "reverse_geocode",
+    "description": "Convert latitude/longitude coordinates to a human-readable address. Returns nearest address, place name, and administrative boundaries.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "type": "number",
+          "description": "Latitude in decimal degrees (e.g. 48.8584)."
+        },
+        "lon": {
+          "type": "number",
+          "description": "Longitude in decimal degrees (e.g. 2.2945)."
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ]
+    }
+  },
+  {
+    "name": "lookup",
+    "description": "Get details for OpenStreetMap locations by ID (e.g., \"N123456\" for node, \"W654321\" for way, \"R111\" for relation). Returns coordinates, names, and metadata.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ids": {
+          "type": "string",
+          "description": "Comma-separated list of OSM IDs with type prefix (e.g. \"N123456,W654321\"). N=node, W=way, R=relation."
+        }
+      },
+      "required": [
+        "ids"
+      ]
+    }
+  }
+]
