@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-nominatim",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Nominatim MCP — wraps OpenStreetMap Nominatim geocoding API (free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "nominatim",
     "gatewaySlug": "nominatim",
-    "sourceHash": "v1-3876eee8d418cbdee6631a53da123bc199d6e0b5a8c048d14d41dbf4353d055a",
-    "sourceCommit": "b2c4383545bb35171d0ada2beb1c9c7168ea175e"
+    "sourceHash": "v1-a68e7ca20944eff45b0b71aa06fe64c7b4a6cfd0dc0d81dacba0df8b814c8ff9",
+    "sourceCommit": "bed7faa04e7276899b5e3870ef11c98625371f2b"
   }
 }
